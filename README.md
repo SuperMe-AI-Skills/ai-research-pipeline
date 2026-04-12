@@ -47,7 +47,7 @@ Testing Skills            Analysis Skills                Pipelines
 | (Steps 01-03)    |    | + Manuscript fragments |    | + Manuscript assembly      |
 +------------------+    | (Steps 04-08)          |    | + LaTeX / PDF compilation  |
                         +------------------------+    | + External AI review       |
-                                                      | (Stages 1-7)              |
+                                                      | (Stages 1-7)               |
                                                       +----------------------------+
 ```
 
