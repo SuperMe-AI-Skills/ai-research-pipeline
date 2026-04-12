@@ -1,0 +1,35 @@
+{
+  "pipeline": "methodology",
+  "domain": "ai_ml",
+  "auto_proceed": true,
+  "gate1_timeout": 10,
+  "max_review_rounds": 4,
+  "reviewer_model": "gpt-5.4",
+  "max_total_gpu_hours": 4,
+  "pilot_epochs": 3,
+  "experiment": {
+    "n_seeds": 3,
+    "bootstrap_iterations": 1000,
+    "ci_level": 0.95,
+    "significance_test": "paired_bootstrap",
+    "ablation_required": true
+  },
+  "frameworks": ["pytorch", "transformers", "sklearn"],
+  "venues": {
+    "ml": ["NeurIPS", "ICML", "ICLR", "AAAI"],
+    "nlp": ["ACL", "EMNLP", "NAACL"],
+    "cv": ["CVPR", "ECCV", "ICCV"],
+    "default": "NeurIPS"
+  },
+  "paper": {
+    "format": "latex",
+    "max_pages": 10,
+    "appendix_allowed": true,
+    "figure_format": "pdf",
+    "figure_dpi": 300
+  },
+  "codex_mcp": {
+    "reasoning": "xhigh",
+    "review_prompt_template": "senior_ml_reviewer"
+  }
+}
