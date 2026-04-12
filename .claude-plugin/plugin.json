@@ -1,0 +1,11 @@
+{
+  "name": "vera-ai-research",
+  "version": "1.0.0",
+  "description": "End-to-end AI/ML research pipeline skills. Literature review, data diagnostics, multi-model analysis, manuscript drafting, LaTeX compilation, external review. Eight skills, three data modalities, two complete pipelines.",
+  "author": {
+    "name": "Jin (Veronica) Liu",
+    "email": "Veronica.Liu0206@gmail.com"
+  },
+  "license": "GPL-3.0",
+  "keywords": ["ai", "ml", "deep-learning", "image-classification", "nlp", "structured-data", "research", "pipeline", "manuscript"]
+}

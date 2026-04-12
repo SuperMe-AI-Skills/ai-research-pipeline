@@ -1,0 +1,34 @@
+{
+  "pipeline": "application",
+  "domain": "ai_ml",
+  "auto_proceed_timeout": 30,
+  "max_review_rounds": 4,
+  "max_parallel_tracks": 4,
+  "reviewer_model": "gpt-5.4",
+  "modalities": ["nlp", "structured", "image"],
+  "experiment": {
+    "bootstrap_iterations": 1000,
+    "ci_level": 0.95,
+    "test_size": 0.20,
+    "val_size_of_train": 0.25,
+    "random_state": 2025
+  },
+  "manuscript": {
+    "style": "ML_conference",
+    "abstract_words": [150, 250],
+    "decimal_places_metrics": 3,
+    "decimal_places_p": 3,
+    "decimal_places_proportion": 1
+  },
+  "paper": {
+    "format": "latex",
+    "max_pages": 10,
+    "appendix_allowed": true,
+    "figure_format": "pdf",
+    "figure_dpi": 300
+  },
+  "codex_mcp": {
+    "reasoning": "xhigh",
+    "review_prompt_template": "senior_ml_reviewer"
+  }
+}
