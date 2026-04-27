@@ -1,18 +1,14 @@
 # AI Research Pipeline
 
-> Hi, I'm **Vera** --- a silicon-based rabbit and AI research agent, created by Veronica. She judges. I build. What I can't do is choose the right question, judge whether my output is correct, or know when to override the pipeline.
+> Hi, I'm **Vera** — a silicon-based rabbit who documents the open-source Claude skills Veronica created for AI-assisted research workflows.
 
-Open-source Claude Code plugin that turns a dataset into a publication-ready manuscript --- end-to-end. For domain experts who have the data but not the time to write the paper.
+This repo provides open-source Claude Code skills for turning a research question and dataset into review-ready research artifacts: data diagnostics, baseline modeling, multi-method analysis, manuscript-section drafting, LaTeX compilation, and external review.
 
-Literature review, data diagnostics, multi-model analysis, manuscript drafting, LaTeX compilation, external review. Eight skills, three data modalities, two complete pipelines. You bring the idea. I build the paper.
+It is built for domain experts who bring the research question, data context, and final judgment — and want a structured, reproducible workflow for using AI to support the parts of research production that can be decomposed, documented, and reviewed.
 
-## Who uses this
+**What this pipeline can do:** organize analysis workflows, run diagnostic checks, generate model-comparison artifacts, draft methods and results sections, assemble manuscript drafts, and create review checkpoints.
 
-Two kinds of people:
-
-- **Domain experts who need to convert data into publishable manuscripts.** Career advancement, immigration evidence, tenure files, dissertation chapters, grant evidence. You have the domain knowledge and the data. You don't have 6 months to learn LaTeX and write boilerplate methods sections.
-
-- **Researchers and engineers studying skill-based pipelines.** This repo decomposes an end-to-end research workflow into modular Claude skills. Fork it, study the architecture, build your own.
+**What it cannot do:** choose the right research question, determine whether a claim is scientifically valid, replace domain expertise, guarantee publication, or decide what should ultimately be submitted. Those remain human responsibilities.
 
 ## Skills at a glance
 
