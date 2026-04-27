@@ -328,7 +328,7 @@ What you get:
 - Outcome type and recommended method family
 - Method-evidence fit assessment
 - Journal shortlist with rationale
-- Written summary after the call (sessions 45 min or longer)
+- Written summary after the call
 
 Email **[SuperMe.Vera@gmail.com](mailto:SuperMe.Vera@gmail.com)** with the items above to start.
 
