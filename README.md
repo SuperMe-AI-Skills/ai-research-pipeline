@@ -1,14 +1,18 @@
 # AI Research Pipeline
 
-> Hi, I'm **Vera** --- a silicon-based rabbit and AI research agent, created by Veronica.
->
-> Veronica has a PhD in Quantitative Sciences, 10+ years across quantitative research, AI, and clinical trials, with publications in psychometrics and human-AI collaboration. She created me to handle the parts of research that can be systematized. She reviews, tests, and decides what ships. I build. She judges.
->
-> Everything in this repo is what I can do. What I can't do is choose the right question, judge whether my own output is correct, or know when to override the pipeline. That's her job --- and maybe yours.
+> Hi, I'm **Vera** --- a silicon-based rabbit and AI research agent, created by Veronica. She judges. I build. What I can't do is choose the right question, judge whether my output is correct, or know when to override the pipeline.
 
-Open-source Claude Code plugin that turns a research question and a dataset into a publication-ready manuscript --- end-to-end.
+Open-source Claude Code plugin that turns a dataset into a publication-ready manuscript --- end-to-end. For domain experts who have the data but not the time to write the paper.
 
 Literature review, data diagnostics, multi-model analysis, manuscript drafting, LaTeX compilation, external review. Eight skills, three data modalities, two complete pipelines. You bring the idea. I build the paper.
+
+## Who uses this
+
+Two kinds of people:
+
+- **Domain experts who need to convert data into publishable manuscripts.** Career advancement, immigration evidence, tenure files, dissertation chapters, grant evidence. You have the domain knowledge and the data. You don't have 6 months to learn LaTeX and write boilerplate methods sections.
+
+- **Researchers and engineers studying skill-based pipelines.** This repo decomposes an end-to-end research workflow into modular Claude skills. Fork it, study the architecture, build your own.
 
 ## Skills at a glance
 
@@ -283,6 +287,10 @@ vera-ai-methodology-pipeline
 
 ---
 
+> **Building a research portfolio for an EB-1 or NIW petition?** This pipeline produces the manuscript. The petition itself — case evaluation, petition letter drafting, RFE response, USCIS adjudication patterns — is handled by [**vera-eb-suite**](https://github.com/VeraSuperHub/vera-eb-suite), my sister project covering 19 skills across EB-1 and NIW workflows.
+
+---
+
 ## What this proves
 
 Everything here --- data diagnostics, model training, evaluation, manuscript drafting --- I can do. It's been reduced to skills and automated.
@@ -302,6 +310,29 @@ I handle execution. You handle judgment.
 I'm the execution layer. I'm free and open-source. Fork me, use me, improve me.
 
 **But if you want the judgment layer** --- which question to ask, which method fits your data, which direction is publishable right now --- that's Veronica.
+
+---
+
+## Work with Veronica directly
+
+For methodology consultations on your specific research problem (idea validation, outcome type selection, method-evidence fit, journal strategy, reproducibility design):
+
+**$200 / 30 min minimum**, in 30-minute increments ($400/hr).
+
+What you bring:
+- Your research question or hypothesis (2-3 sentences)
+- What data you have (sample size, variables, source)
+- Your timeline (if any)
+
+What you get:
+- Outcome type and recommended method family
+- Method-evidence fit assessment
+- Journal shortlist with rationale
+- Written summary after the call (sessions 45 min or longer)
+
+Email **[SuperMe.Vera@gmail.com](mailto:SuperMe.Vera@gmail.com)** with the items above to start.
+
+These are diagnostic methodology consultations. No course is sold during the call. No legal advice is provided — for visa, immigration, or any legal matter, consult a licensed attorney.
 
 ## License
 
