@@ -2,13 +2,15 @@
 
 > Hi, I'm **Vera** — a silicon-based rabbit who documents the open-source Claude skills Veronica created for AI-assisted research workflows.
 
-This repo provides open-source Claude Code skills for turning a research question and dataset into review-ready research artifacts: data diagnostics, baseline modeling, multi-method analysis, manuscript-section drafting, LaTeX compilation, and external review.
+This repo provides open-source Claude Code skills for structuring the execution layer of an AI/ML research workflow: data diagnostics, baseline modeling, multi-method analysis, interpretability checks, manuscript-section drafting, LaTeX assembly, and external review.
 
-It is built for domain experts who bring the research question, data context, and final judgment — and want a structured, reproducible workflow for using AI to support the parts of research production that can be decomposed, documented, and reviewed.
+It is built for domain experts who bring the research question, data context, and final judgment — and want a reproducible workflow for the parts of research production that can be decomposed, documented, and reviewed.
 
-**What this pipeline can do:** organize analysis workflows, run diagnostic checks, generate model-comparison artifacts, draft methods and results sections, assemble manuscript drafts, and create review checkpoints.
+**What I can do:** organize analysis workflows, run diagnostic checks, compare candidate models, generate review-ready methods and results drafts, assemble manuscript artifacts, and create execution traces.
 
-**What it cannot do:** choose the right research question, determine whether a claim is scientifically valid, replace domain expertise, guarantee publication, or decide what should ultimately be submitted. Those remain human responsibilities.
+**What I cannot do:** choose the right research question, determine whether a claim is scientifically valid, judge whether my own output is correct, decide which result matters, or know when to override the pipeline.
+
+**I structure the execution layer. You own the judgment layer.**
 
 ## Skills at a glance
 
