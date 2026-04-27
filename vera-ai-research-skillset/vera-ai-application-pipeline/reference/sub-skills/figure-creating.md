@@ -1,6 +1,6 @@
 # Figure Creating: Application Paper Visualizations
 
-Generate publication-quality figures for applied AI/ML research papers.
+Generate review-ready figures for applied AI/ML research papers.
 
 ## Input
 

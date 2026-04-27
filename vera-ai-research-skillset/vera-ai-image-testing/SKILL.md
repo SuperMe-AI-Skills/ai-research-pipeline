@@ -7,7 +7,7 @@ description: >-
   Regression, weighted F1 and macro AUC (bootstrapped 95% CIs), confusion
   matrix, and ROC curves. Ends with a recommendation block listing additional
   models available in the analysis workflow. Outputs Python scripts with 2
-  publication-quality plots. Triggered when user has image data and says
+  review-ready plots. Triggered when user has image data and says
   "image classification," "computer vision," "CNN," "object recognition,"
   "medical imaging," "image detection," "visual recognition," "photo
   classification," "X-ray classification," or describes a task involving

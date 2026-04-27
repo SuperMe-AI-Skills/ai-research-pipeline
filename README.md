@@ -12,6 +12,19 @@ It is built for domain experts who bring the research question, data context, an
 
 **I structure the execution layer. You own the judgment layer.**
 
+> _Across [VeraSuperHub](https://github.com/VeraSuperHub), Vera structures execution; humans own judgment._
+
+---
+
+## Who uses this
+
+Two kinds of people:
+
+- **Domain experts who need structured AI-assisted research workflows.** You bring the question, data context, and substantive judgment. The pipeline helps with the decomposable execution layer: diagnostics, candidate analyses, manuscript-section drafts, reproducible artifacts, and review checkpoints.
+- **Researchers and engineers studying skill-based pipelines.** This repo decomposes a research workflow into modular Claude skills. Fork it, study the architecture, adapt it to your own domain.
+
+---
+
 ## Skills at a glance
 
 ### Testing (diagnostics + baseline)
@@ -30,12 +43,12 @@ It is built for domain experts who bring the research question, data context, an
 | `vera-ai-structured-analyzing` | Tabular | LogReg, SVM, RF, XGBoost, LightGBM, CatBoost | MLP, TabNet, Stacking Ensemble | Unified 0--100 importance + TabNet attention |
 | `vera-ai-image-analyzing` | Images | ResNet50, EfficientNet-B0, VGG16, DenseNet121 | ViT, Ensemble | GradCAM + ViT attention maps |
 
-### Pipelines (end-to-end orchestration)
+### Pipelines (workflow orchestration)
 
 | Skill | Purpose |
 |---|---|
-| `vera-ai-application-pipeline` | Research question + dataset --> literature review --> parallel multi-method analysis --> Markdown + LaTeX manuscript |
-| `vera-ai-methodology-pipeline` | Research direction --> idea discovery --> implementation --> benchmark experiments --> external review --> paper |
+| `vera-ai-application-pipeline` | Research question + dataset --> literature review --> parallel multi-method analysis --> assembled Markdown + LaTeX manuscript draft |
+| `vera-ai-methodology-pipeline` | Research direction --> idea discovery --> implementation --> benchmark experiments --> external review --> review-ready manuscript draft |
 
 ---
 
@@ -66,7 +79,7 @@ Each modality has a **testing** skill (3 workflow steps) paired with an **analyz
 | 05 | Subgroup Analysis | Stratified performance, fairness metrics, per-subgroup CIs |
 | 06 | Advanced Models | Deep learning + ensemble, early stopping, attention/interpretability |
 | 07 | Model Comparison | Unified performance table, cross-method synthesis, convergent findings |
-| 08 | Generate Manuscript | Assemble methods.md + results.md with output variation protocols |
+| 08 | Assemble Manuscript Draft | Assemble review-ready methods.md + results.md drafts with output variation protocols |
 
 ### Application pipeline stages
 
@@ -105,11 +118,11 @@ Stage 7  Review           External review via Codex MCP (up to 4 rounds)
 ```
 Stage 1  Intake           Research direction, computational environment, project setup
 Stage 2  Discover         Literature landscape --> idea generation --> pilot experiments
-         Gate 1           Human selects idea (or auto-proceed after 10s)
+         Gate 1           Human selects idea (or default-suggestion logged after 10s; user can override on next interaction)
 Stage 3  Implement        3 parallel tracks: Model Code | Baselines | Data Preparation
 Stage 4  Experiment       Benchmark runs, ablation studies, robustness checks
 Stage 5  Review           External review via Codex MCP (up to 4 rounds)
-Stage 6  Paper            LaTeX manuscript, venue-specific formatting, compile to PDF
+Stage 6  Manuscript Draft LaTeX manuscript draft, venue-specific formatting, compile to PDF
 ```
 
 ---
@@ -168,11 +181,11 @@ output/
 +-- references.bib             # BibTeX citations
 ```
 
-The application pipeline assembles these into a complete manuscript:
+The application pipeline assembles these into an assembled manuscript draft (review-ready, not a final manuscript or submission):
 
 ```
 output/
-+-- manuscript.md              # Complete Markdown manuscript
++-- manuscript.md              # Assembled Markdown manuscript draft
 +-- literature_review.md       # Full literature review
 +-- analysis_strategy.md       # Method track plan
 +-- track_outputs/             # Per-track raw outputs
@@ -253,7 +266,7 @@ Invoke any skill with `/vera-ai-research:<skill-name>`:
 /vera-ai-research:vera-ai-methodology-pipeline   Develop a novel attention mechanism for tabular data
 ```
 
-Or let the application pipeline auto-detect your data modality --- just hand it a dataset and a research question.
+Or let the application pipeline auto-detect your data modality --- provide a dataset and research question; the workflow proposes a modality route for human review.
 
 ---
 
@@ -280,18 +293,18 @@ vera-ai-methodology-pipeline
     +-- Stage 3: Parallel implementation (model code | baselines | data prep)
     +-- Stage 4: Benchmark experiments + ablation studies
     +-- Stage 5: External review
-    +-- Stage 6: LaTeX paper (venue-specific: NeurIPS, ICML, ACL, CVPR)
+    +-- Stage 6: Manuscript Draft Assembly (venue-specific LaTeX: NeurIPS, ICML, ACL, CVPR)
 ```
 
 ---
 
-> **Building a research portfolio for an EB-1 or NIW petition?** I draft the manuscript. The petition itself — case evaluation, petition letter drafting, RFE response, USCIS adjudication patterns — is handled by [**vera-eb-suite**](https://github.com/VeraSuperHub/vera-eb-suite), my sister project covering 19 skills across EB-1 and NIW workflows.
+> **Building a research portfolio for an EB-1 or NIW petition?** I support the analysis workflow and manuscript-section drafting; you own the research, the claims, and the final manuscript. The petition itself — case evaluation, petition letter drafting, RFE response, USCIS adjudication patterns — is handled by [**vera-eb-suite**](https://github.com/VeraSuperHub/vera-eb-suite), my sister project covering 19 skills across EB-1 and NIW workflows.
 
 ---
 
 ## What this proves
 
-Everything here --- data diagnostics, model training, evaluation, manuscript drafting --- I can do. It's been reduced to skills and automated.
+Everything here --- data diagnostics, model training, evaluation, manuscript-section drafting --- has been decomposed into reviewable skills with explicit human checkpoints.
 
 What I cannot do:
 
@@ -307,7 +320,7 @@ I handle execution. You handle judgment.
 
 I'm the execution layer. I'm free and open-source. Fork me, use me, improve me.
 
-**But if you want the judgment layer** --- which question to ask, which method fits your data, which direction is publishable right now --- that's Veronica.
+**But if you want the judgment layer** --- which question to ask, which method fits your data, which direction is worth developing, validating, or submitting for expert review --- that's Veronica.
 
 ---
 

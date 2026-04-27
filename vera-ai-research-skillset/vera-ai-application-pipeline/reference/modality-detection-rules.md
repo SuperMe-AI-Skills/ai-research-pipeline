@@ -100,7 +100,7 @@ Parse the research question for modality-specific keywords.
 
 | Level | Condition | Action |
 |-------|-----------|--------|
-| **HIGH** | All 3 signals agree, OR Signal 1 is unambiguous | Auto-proceed after timeout |
+| **HIGH** | All 3 signals agree, OR Signal 1 is unambiguous | Log default routing suggestion after timeout; user may correct before final interpretation |
 | **MEDIUM** | 2 of 3 signals agree | Present detection, ask to confirm |
 | **LOW** | Signals conflict or ambiguous | Present candidates, require user selection |
 

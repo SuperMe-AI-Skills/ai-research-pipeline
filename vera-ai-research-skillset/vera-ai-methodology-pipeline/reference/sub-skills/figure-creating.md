@@ -1,6 +1,6 @@
-# Figure Creating: Publication-Quality ML Visualizations
+# Figure Creating: Review-Ready ML Visualizations
 
-Generate publication-quality figures for AI/ML research papers.
+Generate review-ready figures for AI/ML research papers.
 
 ## Input
 

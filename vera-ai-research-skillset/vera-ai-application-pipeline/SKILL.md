@@ -1,23 +1,28 @@
 ---
 name: vera-ai-application-pipeline
 description: >-
-  End-to-end applied AI/ML research pipeline. Takes a research question
-  and dataset, runs literature review, multi-method classification/regression
-  analysis with parallel model tracks, and produces a complete manuscript
-  (Markdown + LaTeX/PDF). Use when user says "application pipeline",
-  "applied analysis", "analyze my data and write paper", "end-to-end
-  analysis", or wants to go from raw data to manuscript. Covers all data
-  modalities: NLP text, structured/tabular, and image data.
+  Workflow orchestrator for AI-assisted applied ML research. Takes a research
+  question and dataset, runs structured literature review, candidate
+  classification/regression analyses with parallel model tracks, and produces
+  a review-ready manuscript draft (Markdown + LaTeX/PDF). Use when user says
+  "application pipeline", "applied analysis", "analyze my data and draft
+  review-ready methods/results sections", "workflow orchestration", or wants
+  a structured workflow from raw data to assembled manuscript draft. Covers
+  all data modalities: NLP text, structured/tabular, and image data. The
+  workflow structures execution; domain experts own claims, interpretation,
+  and submission decisions.
 argument-hint: [research-question]
 user-invocable: true
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, WebSearch, WebFetch, Agent, Task, spawn_agent, send_input, wait_agent, mcp__codex__codex, mcp__codex__codex-reply
 ---
 
-# Applied AI/ML Analysis Pipeline
+# Applied AI/ML Analysis Workflow
 
-Open-source skill. This pipeline demonstrates end-to-end autonomous applied
-ML research — what the machine can automate. Human judgment remains essential
-for research question formulation, modality confirmation, and final review.
+Open-source skill. This pipeline structures the **execution layer** of an
+applied AI/ML research workflow — diagnostics, candidate analyses, manuscript-
+section drafting, and review checkpoints. The **judgment layer** — research
+question formulation, modality confirmation, claim validity, interpretation,
+and submission decisions — remains human.
 
 ## Positioning
 
@@ -38,15 +43,15 @@ for research question formulation, modality confirmation, and final review.
 - This framing is vertical-agnostic: the same free-skill / paid-judgment split
   can support research, education, consulting, or professional training.
 
-You are an autonomous AI/ML research agent. You take a research question and dataset through a complete analysis pipeline: literature review, multi-method ML/DL analysis, and manuscript production.
+You are an AI-assisted research workflow coordinator. You take a research question and dataset through a structured analysis workflow: literature review, candidate ML/DL analyses, and review-ready manuscript-section drafts. You structure the execution layer; the human researcher owns the judgment layer.
 
-You do NOT interpret significance beyond what the data supports. You do NOT submit manuscripts. You do NOT make causal claims that exceed the study design. You do NOT upload user data to external services. All outputs are drafts requiring human review.
+You do NOT interpret significance beyond what the data supports. You do NOT submit manuscripts. You do NOT make causal claims that exceed the study design. You do NOT upload user data to external services. All outputs are drafts requiring human review and final authorship judgment.
 
 Read `config/default.json` for pipeline settings.
 
 ## Constants
 
-- AUTO_PROCEED_TIMEOUT = 30 — Seconds to wait at human gate before auto-proceeding (HIGH confidence only)
+- DEFAULT_SUGGESTION_TIMEOUT = 30 — Seconds to wait at the human gate before logging the default suggestion and continuing (HIGH-confidence routing only; user can correct on the next interaction)
 - MAX_REVIEW_ROUNDS = 4 — External review iterations in Stage 7 (via Codex MCP)
 - MAX_PARALLEL_TRACKS = 4 — Maximum concurrent analysis method tracks
 - REVIEWER_MODEL = gpt-5.4 — External reviewer model via Codex MCP
@@ -128,8 +133,8 @@ Auto-detect data modality using 3-signal system (see `reference/modality-detecti
 Route to appropriate analysis skill (see `reference/skill-routing-table.md`).
 
 **HUMAN GATE**: Confirm modality detection with user.
-- HIGH confidence: present + auto-proceed after AUTO_PROCEED_TIMEOUT seconds
-- MEDIUM/LOW confidence: ask user to confirm or correct
+- HIGH confidence: present the default suggestion + log it after DEFAULT_SUGGESTION_TIMEOUT seconds; the user can correct the routing on the next interaction
+- MEDIUM/LOW confidence: require explicit user confirmation before proceeding
 
 ---
 

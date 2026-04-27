@@ -7,7 +7,7 @@ description: >-
   Regression classifier with weighted F1 and macro AUC (bootstrapped 95%
   CIs), confusion matrix, and ROC curves. Ends with a recommendation
   block listing additional models and analyses available in the analysis
-  workflow. Outputs Python scripts with 2 publication-quality plots. Triggered when
+  workflow. Outputs Python scripts with 2 review-ready plots. Triggered when
   user has text data and says "text classification," "NLP," "sentiment
   analysis," "AI detection," "language model detection," "document
   classification," "spam detection," "text mining," "topic classification,"

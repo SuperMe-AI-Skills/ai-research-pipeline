@@ -195,7 +195,7 @@ Round 1: {score}/10 -> Round 2: {score}/10 -> ... -> Final: {score}/10
 - PDF pages: {N}
 
 ## Deliverables
-- `output/manuscript.md` -- Complete Markdown manuscript
+- `output/manuscript.md` -- Assembled Markdown manuscript draft
 - `paper/main.pdf` -- Compiled LaTeX PDF
 - `paper/main.tex` -- LaTeX source
 - `output/code.py` -- Reproducible Python code
@@ -299,12 +299,14 @@ is the documented fallback and produces the same artifact set.
 
 ---
 
-## Pipeline Complete
+## Workflow Complete
 
-Final deliverables:
-- `output/manuscript.md` -- Polished Markdown manuscript
-- `paper/main.pdf` -- Publication-ready LaTeX PDF
+Final deliverables (all draft artifacts requiring human review and final authorship judgment):
+- `output/manuscript.md` -- Assembled Markdown manuscript draft
+- `paper/main.pdf` -- Review-ready LaTeX PDF artifact
 - `paper/main.tex` + `paper/sections/*.tex` -- LaTeX source files
 - `output/code.py` -- Reproducible analysis code
 - `AUTO_REVIEW.md` -- Full external review history (project root)
-- `output/RESEARCH_LOG.md` -- Pipeline execution trace + author checklist
+- `output/RESEARCH_LOG.md` -- Workflow execution trace + author checklist
+
+> Submission decisions remain a human authorship judgment.

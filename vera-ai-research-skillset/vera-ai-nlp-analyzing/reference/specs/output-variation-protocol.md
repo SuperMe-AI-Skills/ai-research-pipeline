@@ -58,7 +58,7 @@ Apply per-generation variations to:
 
 ## Layer 5: System Capabilities
 
-What this system automates end-to-end:
+What this system standardizes for review:
 - Correct model selection adapting to data characteristics
 - Class balance handling that triggers appropriate strategies
 - Cross-method comparison with nuanced interpretation

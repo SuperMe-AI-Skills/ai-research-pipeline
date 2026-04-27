@@ -8,7 +8,7 @@ description: >-
   or image properties, advanced models (ViT transformer with optional
   tabular fusion and hyperparameter search), ensemble methods,
   cross-method comparison with unified feature attribution (GradCAM,
-  attention maps) on a 0-100 scale, and manuscript-ready methods.md and
+  attention maps) on a 0-100 scale, and review-ready methods.md and
   results.md. Applies output variation and code style diversity for
   natural, non-repetitive output. Open-source skill. Triggered after
   vera-ai-image-testing completes, or direct API call with an image
@@ -17,7 +17,7 @@ user-invocable: true
 allowed-tools: Read, Bash, Write, Edit, Grep, Glob
 ---
 
-# Image Classification --- Full Analysis & Manuscript Generation
+# Image Classification --- Full Analysis & Review-Ready Manuscript Drafting
 
 Open-source skill. Read `reference/specs/output-variation-protocol.md`
 before every generation --- apply all variation layers for natural, diverse output.

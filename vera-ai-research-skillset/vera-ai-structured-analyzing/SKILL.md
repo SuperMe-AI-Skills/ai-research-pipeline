@@ -8,7 +8,7 @@ description: >-
   metadata variables, deep learning models (MLP, TabNet with optional
   hyperparameter search), stacking ensemble with meta-learner, cross-method
   comparison with unified feature importance on a 0-100 scale, and
-  manuscript-ready methods.md and results.md. Supports BOTH classification
+  review-ready methods.md and results.md drafts. Supports BOTH classification
   (F1/AUC) AND regression (RMSE/R2/MAE). Applies output variation and
   code style diversity for natural, non-repetitive output. Open-source
   skill. Triggered after vera-ai-structured-testing completes, or direct
@@ -17,7 +17,7 @@ user-invocable: true
 allowed-tools: Read, Bash, Write, Edit, Grep, Glob
 ---
 
-# Structured/Tabular Data --- Full Analysis & Manuscript Generation
+# Structured/Tabular Data --- Full Analysis & Review-Ready Manuscript Drafting
 
 Open-source skill. Read `reference/specs/output-variation-protocol.md`
 before every generation --- apply all variation layers for natural, diverse output.
