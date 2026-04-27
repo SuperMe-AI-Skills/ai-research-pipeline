@@ -283,27 +283,27 @@ vera-ai-methodology-pipeline
 
 ---
 
-> **Building a research portfolio for an EB-1 or NIW petition?** This pipeline produces the manuscript. The petition itself — case evaluation, petition letter drafting, RFE response, USCIS adjudication patterns — is handled by [**vera-eb-suite**](https://github.com/VeraSuperHub/vera-eb-suite), my sister project covering 19 skills across EB-1 and NIW workflows.
+> **Building a research portfolio for an EB-1 or NIW petition?** This pipeline drafts the manuscript. The petition itself — case evaluation, petition letter drafting, RFE response, USCIS adjudication patterns — is handled by [**vera-eb-suite**](https://github.com/VeraSuperHub/vera-eb-suite), a companion project covering 19 skills across EB-1 and NIW workflows.
 
 ---
 
 ## What this proves
 
-Everything here --- data diagnostics, model training, evaluation, manuscript drafting --- I can do. It's been reduced to skills and automated.
+What this pipeline does: data diagnostics, model training, evaluation, and manuscript drafting — reduced to modular Claude skills.
 
-What I cannot do:
+What it does not do:
 
-- Choose the right research question
-- Judge whether my own output is correct
-- Know which result matters and which is noise
+- Choose the research question
+- Judge whether outputs are correct
+- Determine which results matter and which are noise
 - Decide when to override the pipeline
 - Frame findings for a specific audience
 
-I handle execution. You handle judgment.
+The pipeline handles execution. The human handles judgment.
 
 ---
 
-I'm the execution layer. I'm free and open-source. Fork me, use me, improve me.
+This pipeline is the execution layer — free and open-source. Fork it, use it, improve it.
 
 **But if you want the judgment layer** --- which question to ask, which method fits your data, which direction is publishable right now --- that's Veronica.
 
