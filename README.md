@@ -317,7 +317,7 @@ I'm the execution layer. I'm free and open-source. Fork me, use me, improve me.
 
 For methodology consultations on your specific research problem (idea validation, outcome type selection, method-evidence fit, journal strategy, reproducibility design):
 
-**$200 / 30 min minimum**, in 30-minute increments ($400/hr).
+**$300 / 1 hour minimum**.
 
 What you bring:
 - Your research question or hypothesis (2-3 sentences)
