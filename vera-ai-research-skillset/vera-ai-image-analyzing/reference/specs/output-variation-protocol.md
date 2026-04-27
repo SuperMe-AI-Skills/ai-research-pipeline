@@ -61,7 +61,7 @@ Apply per-generation variations to:
 
 ## Layer 5: System Capabilities
 
-What this system automates end-to-end:
+What this system standardizes for review:
 - Correct architecture selection adapting to image characteristics
 - Class balance handling that triggers appropriate strategies
 - Transfer learning strategy (feature extraction vs full fine-tuning) based on dataset size

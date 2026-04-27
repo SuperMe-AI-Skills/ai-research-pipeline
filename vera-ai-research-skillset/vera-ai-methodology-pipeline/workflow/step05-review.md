@@ -168,4 +168,4 @@ is the documented fallback and produces the same artifact set.
 ---
 
 ## Next Step
--> Step 06: Paper Writing
+-> Step 06: Manuscript Draft Assembly

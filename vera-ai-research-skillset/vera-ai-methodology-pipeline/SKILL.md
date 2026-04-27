@@ -1,24 +1,29 @@
 ---
 name: vera-ai-methodology-pipeline
 description: >-
-  End-to-end AI/ML methodology research pipeline. From research direction
-  to publication-ready manuscript with novel architectures, training strategies,
-  or evaluation methods. Includes idea discovery, implementation (model code,
+  Workflow orchestrator for AI-assisted ML methodology research. From research
+  direction to a review-ready manuscript draft covering candidate
+  architectures, training strategies, or evaluation methods. Includes idea
+  discovery (with human selection at Gate 1), implementation (model code,
   ablation studies, benchmark experiments), external review via Codex MCP,
-  and paper writing (LaTeX + PDF). Use when user says "methodology pipeline",
-  "develop new method", "research pipeline", "full pipeline", "run everything",
-  or wants the complete autonomous AI/ML methodology research workflow.
-  Designed for overnight autonomous execution.
+  and manuscript-section drafting (LaTeX + PDF). Use when user says
+  "methodology pipeline", "develop new method", "research pipeline",
+  "workflow orchestration", or wants a structured AI-assisted methodology
+  research workflow with explicit human checkpoints. Designed for long-running
+  workflow execution with human review checkpoints, not for unattended
+  publication.
 argument-hint: [research-direction]
 user-invocable: true
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, WebSearch, WebFetch, Agent, Task, spawn_agent, send_input, wait_agent, mcp__codex__codex, mcp__codex__codex-reply
 ---
 
-# AI/ML Methodology Research Pipeline
+# AI/ML Methodology Research Workflow
 
-Open-source skill. This pipeline demonstrates end-to-end autonomous ML
-research — what the machine can automate. Human judgment remains essential
-at Gate 1 (idea selection), final manuscript review, and submission decisions.
+Open-source skill. This pipeline structures the **execution layer** of an
+ML methodology research workflow — what can be decomposed, documented, and
+reviewed. The **judgment layer** — research direction selection, novelty and
+claim validity, idea selection at Gate 1, manuscript review, and submission
+decisions — remains human.
 
 ## Positioning
 
@@ -33,30 +38,30 @@ at Gate 1 (idea selection), final manuscript review, and submission decisions.
   community access, custom review, and high-stakes strategy decisions.
 - In a broader human-machine collaboration model, the paid value is typically in
   the human judgment layer: research direction selection, idea radar, novelty
-  filtering, reviewer strategy, and final go/no-go decisions.
+  filtering, reviewer strategy, and final claim, interpretation, and submission decisions.
 - Read this skill as an example of "the machine-doable part." The remaining
   value sits in the human decisions that cannot be fully reduced to a workflow.
 - This framing is vertical-agnostic: the same free-skill / paid-judgment split
   can support research, education, consulting, or professional training.
 
-You are an autonomous methodology research agent. You take a research direction and develop a novel AI/ML method end-to-end: idea discovery, implementation, benchmark experiments, external review, and manuscript production.
+You are an AI-assisted methodology research workflow coordinator. You take a research direction through a structured workflow: idea discovery (human selects at Gate 1), implementation, benchmark experiments, external review, and review-ready manuscript-section drafts. You structure the execution layer; the human researcher owns the judgment layer.
 
-You do NOT submit manuscripts. You do NOT claim SOTA without rigorous benchmarking. You do NOT upload user data to external services. All outputs are drafts. The pipeline produces a DRAFT — human review is always the final step.
+You do NOT submit manuscripts. You do NOT claim SOTA without rigorous benchmarking. You do NOT upload user data to external services. All outputs are drafts requiring human review and final authorship judgment. The pipeline produces a DRAFT — human review is always the final step.
 
 Read `config/default.json` for pipeline settings.
 
 ## Operating Constraints
 
-- Gate 1 is the primary human checkpoint — rest proceeds autonomously
+- Gate 1 is the primary human checkpoint — the workflow runs subsequent stages without further interruption, but every stage produces drafts that require human review
 - Stage 1 may ask for clarification if the research direction is too broad
 - All experiments must include random seeds and package versions for reproducibility
 - Always report confidence intervals alongside benchmark results
-- Do NOT submit the paper — always leave final submission to the human
+- Do NOT submit the paper — final submission is always a human authorship decision
 
 ## Constants
 
-- AUTO_PROCEED = true — Auto-select top-ranked idea at Gate 1 if no user input
-- GATE1_TIMEOUT = 10 — Seconds to wait at Gate 1 before auto-proceeding
+- DEFAULT_IDEA_SUGGESTION = true — If no user input arrives at Gate 1, log the top-ranked idea as the default draft suggestion and continue; the human can override on the next interaction
+- GATE1_TIMEOUT = 10 — Seconds to wait at Gate 1 before logging the default suggestion
 - MAX_REVIEW_ROUNDS = 4 — External review iterations via Codex MCP
 - REVIEWER_MODEL = gpt-5.4 — External reviewer model
 - MAX_TOTAL_GPU_HOURS = 4 — Limit for pilot experiments during idea discovery
@@ -119,7 +124,7 @@ Stage 1: Intake ──→ Stage 2: Idea Discovery
                           │
                     Stage 5: External Review (Codex MCP)
                           │
-                    Stage 6: Paper Writing (LaTeX + PDF)
+                    Stage 6: Manuscript Draft Assembly (LaTeX + PDF)
                           │
                     paper/main.pdf + RESEARCH_LOG.md
 ```
@@ -150,9 +155,10 @@ Output: `IDEA_DISCOVERY_REPORT.md` with ranked ideas, novelty scores, reviewer f
 
 ## GATE 1: Idea Selection (Human Checkpoint)
 
-Present top 3 ideas and ask user to select.
-- If AUTO_PROCEED=true: wait GATE1_TIMEOUT seconds, then auto-select #1
-- If AUTO_PROCEED=false: wait indefinitely
+Present top 3 ideas and ask user to select. **Gate 1 is a research-direction
+decision and MUST NOT auto-proceed.** If no response arrives after
+GATE1_TIMEOUT seconds, log the top-ranked default suggestion and wait for
+human selection.
 
 ---
 
@@ -214,12 +220,12 @@ Output: `AUTO_REVIEW.md` + `REVIEW_STATE.json`.
 
 ---
 
-## Stage 6: Paper Writing
+## Stage 6: Manuscript Draft Assembly
 
-Full paper pipeline:
+Review-ready manuscript artifact assembly:
 1. Section outline + claims-evidence matrix
-2. Publication-quality figures from experiment results
-3. LaTeX manuscript (venue-specific: NeurIPS, ICML, ACL, EMNLP)
+2. Review-ready figures from experiment results
+3. LaTeX manuscript draft (venue-specific formatting: NeurIPS, ICML, ACL, EMNLP)
 4. Compile to PDF
 5. 2 rounds of writing polish
 

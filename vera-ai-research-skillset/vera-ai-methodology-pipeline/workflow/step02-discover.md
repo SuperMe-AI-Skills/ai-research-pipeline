@@ -142,14 +142,11 @@ Top ideas from discovery:
 Which idea should we pursue? (default: #1 ranked)
 ```
 
-**Decision logic**:
+**Decision logic** (Gate 1 is a research-direction decision and MUST NOT auto-proceed):
 ```
-if AUTO_PROCEED = true:
-  wait GATE1_TIMEOUT seconds
-  if user responds: use their selection
-  else: auto-select #1 ranked
-else:
-  wait indefinitely for user selection
+wait GATE1_TIMEOUT seconds
+if user responds: use their selection
+else: log the top-ranked default suggestion and continue waiting for human selection
 ```
 
 ### 2.7 Update State

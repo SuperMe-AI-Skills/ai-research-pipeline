@@ -7,7 +7,7 @@ description: >-
   subgroup analysis by metadata or text properties, deep learning models
   (GRU, TextCNN, ALBERT with optional tabular fusion and hyperparameter
   search), cross-method comparison with unified feature importance on a 0-100
-  scale, and manuscript-ready methods.md and results.md. Applies output
+  scale, and review-ready methods.md and results.md drafts. Applies output
   variation and code style diversity for natural, non-repetitive output.
   Open-source skill. Triggered after vera-ai-nlp-testing completes,
   or direct API call with an NLP text classification task.
@@ -15,7 +15,7 @@ user-invocable: true
 allowed-tools: Read, Bash, Write, Edit, Grep, Glob
 ---
 
-# NLP Text Classification --- Full Analysis & Manuscript Generation
+# NLP Text Classification --- Full Analysis & Review-Ready Manuscript Drafting
 
 Open-source skill. Read `reference/specs/output-variation-protocol.md`
 before every generation --- apply all variation layers for natural, diverse output.

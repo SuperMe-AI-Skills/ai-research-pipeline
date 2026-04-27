@@ -1,4 +1,4 @@
-# Step 06: Paper Writing (LaTeX + PDF)
+# Step 06: Manuscript Draft Assembly (LaTeX + PDF)
 
 > **Executor**: Main Agent (invokes `reference/sub-skills/manuscript-writing.md`)
 > **Input**: All project artifacts + `AUTO_REVIEW.md` + `RESULTS_ANALYSIS.md`
@@ -8,13 +8,13 @@
 
 ## Execution Instructions
 
-### 6.1 Launch Paper Writing Pipeline
+### 6.1 Launch Manuscript Draft Assembly Workflow
 
 ```
 Read and execute reference/sub-skills/manuscript-writing.md with context: "$ARGUMENTS"
 ```
 
-This invokes the paper-writing workflow skill which chains 5 sub-skills:
+This invokes the manuscript-draft assembly workflow which chains 5 sub-skills:
 
 #### Phase 1: Paper Planning (`reference/sub-skills/paper-planning.md`)
 
@@ -36,7 +36,7 @@ Target venues: NeurIPS, ICML, ICLR, ACL, EMNLP, CVPR, AAAI, or journal (JMLR, TM
 
 #### Phase 2: Figure Generation (`reference/sub-skills/figure-creating.md`)
 
-Generate publication-quality figures from experiment results:
+Generate review-ready figures from experiment results:
 
 | Figure Type | Source | Format |
 |-------------|--------|--------|
@@ -117,7 +117,7 @@ After paper pipeline completes, write `RESEARCH_LOG.md`:
 | 3. Implementation | Completed | ~{X} min | Tracks: {list} |
 | 4. Experiments | Completed | ~{X} hours | {N} runs, {N} datasets, {N} seeds |
 | 5. External Review | Completed | ~{X} hours | {N} rounds, final: {score}/10 |
-| 6. Paper Writing | Completed | ~{X} min | {pages} pages, {venue} format |
+| 6. Manuscript Draft Assembly | Completed | ~{X} min | {pages} pages, {venue} format |
 
 ## Key Results
 - {Finding 1}
@@ -183,13 +183,13 @@ Round 1: {score}/10 -> Round 2: {score}/10 -> ... -> Final: {score}/10
 
 ---
 
-## Pipeline Complete
+## Workflow Complete
 
-The methodology research pipeline has produced:
-- A novel AI/ML method with complete implementation
-- Comprehensive experimental evaluation with ablations
+The methodology research workflow has produced:
+- A candidate AI/ML method with full implementation
+- Experimental evaluation with ablations
 - Statistical significance testing across multiple seeds
-- A publication-ready LaTeX manuscript for a top venue
+- A review-ready LaTeX manuscript draft formatted for a target venue
 - Complete reproducibility bundle (code + configs + data)
 
-**Critical reminder**: All experimental claims MUST be verified by the author. The pipeline produces a DRAFT.
+**Critical reminder**: All experimental claims, novelty positioning, and venue suitability MUST be verified by the human author. The workflow produces a DRAFT; submission and authorship judgment remain human responsibilities.

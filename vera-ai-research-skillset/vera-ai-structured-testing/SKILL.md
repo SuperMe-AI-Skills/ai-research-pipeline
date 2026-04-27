@@ -7,7 +7,7 @@ description: >-
   a baseline LightGBM classifier with weighted F1 and macro AUC (bootstrapped
   95% CIs), feature importance, confusion matrix, and ROC curves. Ends with
   a recommendation block listing additional models available in the analysis
-  workflow. Outputs Python scripts with 2 publication-quality plots. Triggered when user
+  workflow. Outputs Python scripts with 2 review-ready plots. Triggered when user
   has tabular/structured data and says "tabular data," "structured data,"
   "classification," "regression," "feature engineering," "predict from columns,"
   "CSV classification," "spreadsheet," "predict outcome," or describes a task

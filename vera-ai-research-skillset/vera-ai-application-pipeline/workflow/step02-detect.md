@@ -55,7 +55,7 @@ Parse the research question for analytical intent:
 
 | Confidence | Condition | Action |
 |------------|-----------|--------|
-| HIGH | All 3 signals agree on same modality | Present detection, auto-proceed after AUTO_PROCEED_TIMEOUT |
+| HIGH | All 3 signals agree on same modality | Present detection; log default routing suggestion after DEFAULT_SUGGESTION_TIMEOUT and continue; user may correct before final interpretation |
 | MEDIUM | 2 of 3 signals agree | Present detection with alternatives, ask user to confirm |
 | LOW | All 3 signals disagree, or signals ambiguous | Present top candidates, require user selection |
 
@@ -92,14 +92,14 @@ Signals:
 
 This means I'll use: [describe the analysis approach briefly]
 
-Confirm? (auto-proceeding in Xs if HIGH confidence)
+Confirm? (logging default routing suggestion in Xs if HIGH confidence; you can correct before final interpretation)
   1. Yes, proceed with [MODALITY]
   2. Actually, it's [alternative modality]
   3. Let me explain...
 ```
 
-If HIGH confidence and no user response within AUTO_PROCEED_TIMEOUT: auto-proceed.
-If user corrects: update modality and re-route.
+If HIGH confidence and no user response within DEFAULT_SUGGESTION_TIMEOUT: log the default routing suggestion and continue.
+If user corrects (now or before final interpretation): update modality and re-route.
 
 ### 2.4 Route to Analysis Skill
 
@@ -144,7 +144,7 @@ Per-modality routing (from `reference/skill-routing-table.md`):
 | ID | Check Item | Pass Criteria | Failure Handling |
 |----|------------|---------------|------------------|
 | 2a | Supported modality determined | One of `nlp`, `structured`, `image` | Ask user to narrow or stop as unsupported |
-| 2b | User confirmed (or auto-proceeded) | Confirmation received or timeout elapsed | Wait for user |
+| 2b | User confirmed (or default routing logged) | Confirmation received or timeout elapsed | Wait for user |
 | 2c | Skill path valid | SKILL.md exists at resolved path | Check routing table; ask user |
 | 2d | State updated | PIPELINE_STATE.json has stage=2 fields | Rewrite |
 
