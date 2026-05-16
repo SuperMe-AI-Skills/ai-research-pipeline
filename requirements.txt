@@ -1,0 +1,43 @@
+# AIResearch Skill System — Python Dependencies
+#
+# Install with:
+#   python3 -m venv .venv
+#   .venv/bin/pip install -r requirements.txt
+#
+# Tested with Python 3.9+. Pinned to known-working versions but most
+# recent releases of these libraries are compatible.
+#
+# System dependencies (install separately, not via pip):
+#   - libomp        — required by LightGBM and XGBoost on macOS
+#                     macOS: brew install libomp
+#                     Ubuntu: apt-get install libomp-dev
+#                     Workaround if R is installed: set DYLD_LIBRARY_PATH to R's lib dir, e.g.
+#                       DYLD_LIBRARY_PATH=/Library/Frameworks/R.framework/Resources/lib python script.py
+#   - CUDA toolkit  — optional, required only for GPU training of torch / transformers
+#                     CPU-only torch works for the examples but is slow for image training
+
+# Core scientific stack
+numpy>=1.24,<3.0
+pandas>=2.0,<3.0
+scipy>=1.10,<2.0
+
+# Plotting
+matplotlib>=3.7,<4.0
+seaborn>=0.12,<1.0
+Pillow>=10.0,<12.0
+opencv-python>=4.5,<5.0
+
+# Classical ML
+scikit-learn>=1.3,<2.0
+lightgbm>=4.0,<5.0
+xgboost>=2.0,<3.0
+catboost>=1.2,<2.0
+
+# Deep learning (NLP + Image + Structured DL models)
+torch>=2.0,<3.0
+torchvision>=0.15,<1.0
+transformers>=4.30,<5.0  # for ALBERT in NLP engine
+
+# Notebook / dev (optional)
+# jupyter>=1.0
+# ipython>=8.0
